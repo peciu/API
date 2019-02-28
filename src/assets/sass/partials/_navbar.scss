@@ -1,0 +1,117 @@
+.topbar{
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999px;
+    .nav-bar{
+      height: $nav-height;
+      background: $default-bg;
+      &--left{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          width: $nav-left-width;
+          .svg-icon {
+            height: 20px;
+            width: 20px;
+          }
+          a {
+            font-size: 20px;
+            text-transform: uppercase;
+            line-height: 20px;
+            color: white;
+            margin-left: 10px;
+            margin-top: 2.5px;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+      }
+
+      &__lists{
+        display: flex;
+        li {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      &--right{
+          min-height: $nav-height;
+          width: calc(100vw - 240px);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+
+      &__lists{
+        list-style: none;
+        margin-bottom: 0rem;
+        &--left {
+          display: flex;
+          align-items: center;
+          .svg-icon{
+            height: 14px;
+            width: 20px;
+            margin-right: 20px;
+            transition: 0.4s;
+            &:hover{
+              opacity: .5;
+            }
+          }
+        }
+        &--right {
+          display: flex;
+          li{
+            margin: 0 20px;
+          }
+
+        }
+        &__link{
+
+
+        }
+        &__input-field {
+          input{
+            border: none;
+            background: $white-transparent;
+            height: 40px;
+            border-radius: 50px;
+            width: 250px;
+            font-size: 12px;
+            outline-offset: 0px;
+            &::placeholder{
+              color: white;
+              padding-left: 20px;
+              font-size: 12px;
+              text-transform: uppercase;
+              letter-spacing: 0.1em;
+              transition: opacity 0.3s;
+            }
+            &:focus{
+              color: white;
+              outline: none;
+              padding-left: 22px;
+              font-size: 12px;
+              text-transform: uppercase;
+              letter-spacing: 0.1em;
+
+              &::placeholder{
+              opacity: 0;
+              padding-left: 0px;
+            }
+            }
+            &:active{
+              &::placeholder{
+              opacity: 0;
+              padding-left: 0px;
+            }
+            }
+
+          }
+        }
+      }
+    }
+}

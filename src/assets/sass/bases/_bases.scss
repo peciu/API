@@ -1,0 +1,13 @@
+@import 'variables.scss';
+@font-face {font-family: 'CeraPRO'; src: url('../fonts/CeraPRO-Regular.ttf')};
+
+body {
+  margin: 0;
+  font-family: 'CeraPRO';
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
