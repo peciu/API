@@ -50,8 +50,11 @@ module.exports = function(grunt) {
         src: [
             '../../../../web/assets/images/ic_menu_24px.svg',
             '../../../../web/assets/images/ic_smile_24px.svg',
+            '../../../../web/assets/images/ic_arrow_24px.svg',
+            '../../../../web/assets/images/ic_uikit_24px.svg',
+            '../../../../web/assets/images/ic_dashboard_24px.svg',
         ],
-    
+
         dest: 'src/sprites',
         options: {
             shape: {

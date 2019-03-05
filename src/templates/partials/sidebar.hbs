@@ -1,53 +1,3 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
-    <link rel="stylesheet" href="assets/css/app.css">
-  </head>
-  <body>
-<div class="topbar">
-
-  <nav class='nav-bar nav-bar--left'>
-    <ul class='nav-bar__lists'>
-        <li> <svg class="svg-icon">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#smile">
-          </use>
-        </svg>
-        <a class="nav-bar__lists__link" href="#">Hello</a>
-        </li>
-
-
-      </ul>
-    </nav>
-
-    <nav class='nav-bar nav-bar--right'>
-
-      <ul class='nav-bar__lists nav-bar__lists--left'>
-          <li>
-             <a class="nav-bar__lists__link" href="#">
-               <svg class="svg-icon">
-                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use>
-               </svg>
-            </a>
-          </li>
-          <li><div class="nav-bar__lists__input-field">
-            <input type="search" placeholder="Search.."name="" value="">
-          </div>
-        </li>
-        </ul>
-
-
-
-        <ul class='nav-bar__lists nav-bar__lists--right'>
-            <li class="nav-bar__lists__link"> <a href="#">btn</a></li>
-            <li class="nav-bar__lists__link"> <a href="#">btn</a></li>
-            <li class="nav-bar__lists__link"> <a href="#">icon</a></li>
-          </ul>
-
-      </nav>
-</div>
 <div class="side-functions">
 
 
@@ -59,7 +9,7 @@
 
       <ul class="side-column__lists">
 
-      <li class="">
+      <li class="{{#is basename 'dashboard'}}active{{/is}}">
         <a href="#">
           <div class="side-column__lists--left">
                 <svg class="svg-icon">
@@ -79,7 +29,7 @@
         </li>
 
 
-        <li class="">
+        <li class="{{#is basename 'ui_kit'}} active{{/is}}">
           <a href="#">
             <div class="side-column__lists--left">
                   <svg class="svg-icon">
@@ -329,10 +279,3 @@
 
   </div>
 </div>
-
-<div class="section-container">
-</div>
-
-<div class="svg-sprite-container"><?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow" viewBox="0 0 3.29 5.16" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><style>.ast0{fill:none;stroke:#000;stroke-miterlimit:10}</style><path class="ast0" d="M.35.35l2.23 2.23L.35 4.81"/></symbol><symbol viewBox="0 0 21.5 21" id="dashboard" xmlns="http://www.w3.org/2000/svg"><path class="bst0" d="M18.83 19.66H2.67V6.78l8.08-5.44 8.08 5.44z"/></symbol><symbol id="menu" viewBox="0 0 21.5 21" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><style>.cst0{fill:none;stroke:#fff;stroke-miterlimit:10}</style><path class="cst0" d="M0 .5h21.5M0 10.5h21.5M0 20.5h21.5"/></symbol><symbol id="smile" viewBox="0 0 21.5 21" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><style>.dst0{fill:none;stroke:#fff;stroke-miterlimit:10}</style><circle class="dst0" cx="10.77" cy="10.53" r="9.53"/><path class="dst0" d="M14.71 10.18c0 2.18-1.76 3.94-3.94 3.94s-3.94-1.76-3.94-3.94M6.77 8.22a1.34 1.34 0 0 1 2.68 0M12.04 8.22a1.34 1.34 0 0 1 2.68 0"/></symbol><symbol id="uikit" viewBox="0 0 22.56 22.35" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><style>.est0{fill:none;stroke:#000;stroke-width:2;stroke-miterlimit:10}</style><path class="est0" d="M8.04 17.83a3.519 3.519 0 1 1-7.04 0c0-1.94 3.52-6.52 3.52-6.52s3.52 4.58 3.52 6.52zM21.56 8.16a3.519 3.519 0 1 1-7.04 0c0-1.94 3.52-6.52 3.52-6.52s3.52 4.58 3.52 6.52z"/></symbol></svg></div>
-  </body>
-</html>

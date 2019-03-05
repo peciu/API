@@ -9623,6 +9623,30 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
+.section-container {
+  margin-top: 100px;
+  margin-left: 260px;
+}
+
+.boxes {
+  background: white;
+  padding: 10px;
+  text-align: right;
+}
+
+.v-align {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 @font-face {
   font-family: 'CeraPRO';
   src: url("../fonts/CeraPRO-Regular.ttf");
@@ -9630,6 +9654,7 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   margin: 0;
   font-family: 'CeraPRO';
+  background: #f4f4f4;
 }
 
 ul {
@@ -9638,12 +9663,20 @@ ul {
   margin: 0;
 }
 
+p {
+  margin: 0px;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0px;
+}
+
 .topbar {
   display: flex;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999px;
+  z-index: 2;
 }
 .topbar .nav-bar {
   height: 80px;
@@ -9656,7 +9689,11 @@ ul {
   position: relative;
   width: 240px;
 }
+.topbar .nav-bar--left:hover .svg-icon {
+  transform: rotate(360deg);
+}
 .topbar .nav-bar--left .svg-icon {
+  transition: 0.9s;
   height: 20px;
   width: 20px;
 }
@@ -9716,6 +9753,7 @@ ul {
   width: 250px;
   font-size: 12px;
   outline-offset: 0px;
+  transition: background 0.3s;
 }
 .topbar .nav-bar__lists__input-field input::placeholder {
   color: white;
@@ -9737,7 +9775,118 @@ ul {
   opacity: 0;
   padding-left: 0px;
 }
-.topbar .nav-bar__lists__input-field input:active::placeholder {
+.topbar .nav-bar__lists__input-field input:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.topbar .nav-bar__lists__input-field input:active {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.side-functions {
+  width: 240px;
+  background: #fff;
+  top: 80px;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  overflow: scroll;
+  padding-bottom: 200px;
+}
+.side-functions .side-column .side-name {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  height: 70px;
+  line-height: 100px;
+  padding-left: 20px;
+}
+.side-functions .side-column .svg-icon {
+  height: 15px;
+  width: 15px;
+  margin-bottom: 5px;
+  fill: none;
+  stroke: black;
+}
+.side-functions .side-column .svg-icon-arrow {
+  height: 7px;
+  width: 7px;
   opacity: 0;
-  padding-left: 0px;
+  margin: 20px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.side-functions .side-column__lists a {
+  font-size: 14px;
+  height: 40px;
+  width: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  color: black;
+  text-decoration: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 20px;
+  -webkit-transition: background 0.4s;
+  transition: background 0.4s;
+}
+.side-functions .side-column__lists a:hover {
+  background: #f4f4f4;
+  color: #0500E0;
+}
+.side-functions .side-column__lists a:hover .svg-icon-arrow {
+  opacity: 1;
+  margin: 0px;
+}
+.side-functions .side-column__lists__link {
+  color: black;
+  padding-left: 10px;
+}
+.side-functions .side-column__lists li.active a {
+  color: #0500E0;
+}
+
+.circle {
+  height: 80px;
+  width: 80px;
+  border-radius: 50px;
+  border: 4px solid green;
+  position: relative;
+}
+.circle--success {
+  background: rgba(72, 187, 73, 0.75);
+  border-color: rgba(72, 187, 73, 0.35);
+}
+.circle--primary {
+  background: rgba(16, 46, 213, 0.75);
+  border-color: rgba(16, 46, 213, 0.35);
+}
+.circle--danger {
+  background: rgba(236, 34, 42, 0.75);
+  border-color: rgba(236, 34, 42, 0.35);
+}
+.circle--secondary {
+  background: rgba(87, 28, 214, 0.75);
+  border-color: rgba(87, 28, 214, 0.35);
+}
+.circle__svg {
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  stroke: white;
+  fill: none;
 }
