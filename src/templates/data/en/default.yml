@@ -1,0 +1,14 @@
+lang: en
+
+sidebar:
+    title: main
+    dashboard: Dashboard
+    uikit: UI kit
+    typography: Typography
+    components: Components
+    icons: Icons
+    forms: Forms
+    tables: Tables
+    charts: Charts
+    maps: Maps
+    mail: Mail

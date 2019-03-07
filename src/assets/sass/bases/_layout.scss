@@ -11,15 +11,12 @@
         text-align: left;
     }
 
-    &__user{
-        &--info{
+    &__user-info{
             margin-left: 20px;
+        p:nth-child(2) {
+            opacity: 0.6;
         }
-    }
-
-    &--right {
-        text-align: right;
-    }
+        }
 
     &--flex {
         display: -webkit-box;
@@ -32,5 +29,16 @@
         border-radius: 50px;
         -o-object-fit: cover;
            object-fit: cover;
+    }
+}
+.user-role{
+    &--master {
+        color: $color-success;
+    }
+    &--user {
+        color: $color-primary;
+    }
+    &--admin {
+        color: $color-danger;
     }
 }

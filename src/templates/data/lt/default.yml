@@ -1,0 +1,14 @@
+lang: lt
+
+sidebar:
+    title: Pagr
+    dashboard: Skydelis
+    uikit: V. Sąsajos rinkinys
+    typography: Tipografija
+    components: Komponentai
+    icons: Ikonos
+    forms: Formos
+    tables: Lentelės
+    charts: Grafikai
+    maps: Žemėlapiai
+    mail: El-paštas

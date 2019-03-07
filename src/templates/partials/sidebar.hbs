@@ -4,12 +4,12 @@
     <div class="side-column side-column--main">
 
             <div class="side-name">
-              <p>main</p>
+              <p>{{default.sidebar.title}}</p>
             </div>
 
       <ul class="side-column__lists">
 
-      <li class="{{#is basename 'dashboard'}}active{{/is}}">
+      <li class="{{#is custom_basename 'dashboard'}}active{{/is}}">
         <a href="#">
           <div class="side-column__lists--left">
                 <svg class="svg-icon">
@@ -17,7 +17,7 @@
                     </use>
                 </svg>
 
-              Dashboard
+              {{default.sidebar.dashboard}}
 
             </div>
 
@@ -37,7 +37,7 @@
                       </use>
                   </svg>
 
-                UI kit
+                {{default.sidebar.uikit}}
 
               </div>
 
@@ -56,7 +56,7 @@
                         </use>
                     </svg>
 
-                  Typography
+                  {{default.sidebar.typography}}
 
                 </div>
 
@@ -75,7 +75,7 @@
                           </use>
                       </svg>
 
-                    Components
+                     {{default.sidebar.components}}
 
                   </div>
 
@@ -94,7 +94,7 @@
                             </use>
                         </svg>
 
-                      Icons
+                      {{default.sidebar.icons}}
 
                     </div>
 
@@ -113,7 +113,7 @@
                               </use>
                           </svg>
 
-                        Forms
+                        {{default.sidebar.forms}}
 
                       </div>
 
@@ -142,7 +142,7 @@
                       </use>
                   </svg>
 
-                Tables
+                {{default.sidebar.tables}}
 
               </div>
 
@@ -161,7 +161,8 @@
                         </use>
                     </svg>
 
-                  Charts
+                    {{default.sidebar.charts}}
+
 
                 </div>
 
@@ -180,7 +181,8 @@
                           </use>
                       </svg>
 
-                    Maps
+                      {{default.sidebar.maps}}
+
 
                   </div>
 
@@ -198,7 +200,7 @@
                             </use>
                         </svg>
 
-                      Mail
+                      {{default.sidebar.mail}}
 
                     </div>
 

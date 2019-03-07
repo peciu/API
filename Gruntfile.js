@@ -32,58 +32,64 @@ module.exports = function(grunt) {
             layoutdir: 'src/templates/layouts',
             layout: ['default.hbs'],
             partials: ['src/templates/partials/{,*/}*.*', 'src/sprites/svg/*'],
-            helpers: ['partial'],
+            helpers: [''],
             flatten: true
         },
         en: {
             options: {
-                data: ['src/templates/data/en/*.yml', 'src/templates/data/*.yml']
+                data: ['src/templates/data/en/*.yml']
             },
             src: ['src/templates/pages/en/*.hbs'],
             dest: './web'
         },
-    },
-
-    svg_sprite: {
-    generate: {
-        cwd: 'web/assets/vendor/material-design-icons',
-        src: [
-            '../../../../web/assets/images/ic_menu_24px.svg',
-            '../../../../web/assets/images/ic_smile_24px.svg',
-            '../../../../web/assets/images/ic_arrow_24px.svg',
-            '../../../../web/assets/images/ic_uikit_24px.svg',
-            '../../../../web/assets/images/ic_dashboard_24px.svg',
-        ],
-
-        dest: 'src/sprites',
-        options: {
-            shape: {
-                id: {
-                    generator: function(filename) {
-                        var id = filename.match(/ic_(\w+)_\d+/);
-                        return id[1];
-                    }
-                },
+        lt: {
+            options: {
+                data: ['src/templates/data/lt/*.yml']
             },
-            mode: {
-                symbol: {
-                    dest: ''
+            src: ['src/templates/pages/lt/*.hbs'],
+            dest: './web/lt/'
+        },
+
+    },
+    svg_sprite: {
+        generate: {
+            cwd: 'web/assets/vendor/material-design-icons',
+            src: [
+                '../../../../web/assets/images/ic_menu_24px.svg',
+                '../../../../web/assets/images/ic_home_24px.svg',
+                '../../../../web/assets/images/ic_favorite_24px.svg',
+                '../../../../web/assets/images/ic_timeline_24px.svg',
+                '../../../../web/assets/images/ic_trackChanges_24px.svg',
+                '../../../../web/assets/images/ic_visibility_24px.svg',
+            ],
+            dest: 'src/sprites',
+            options: {
+                shape: {
+                    id: {
+                        generator: function(filename) {
+                            var id = filename.match(/ic_(\w+)_\d+/);
+                            return id[1];
+                        }
+                    },
+                },
+                mode: {
+                    symbol: {
+                        dest: ''
+                    }
                 }
             }
         }
-    }
-},
-
+    },
     watch: {
         options: {
         },
         dev: {
             files: ['src/assets/sass/**/*.scss', 'src/templates/**/*.hbs'],
-            tasks: ['compass:dev', 'assemble:en']
+            tasks: ['compass:dev', 'assemble:site']
         },
         handlebars: {
             files: ['src/templates/*/*.hbs', 'src/templates/layouts/*.hbs' ],
-            tasks: ['assemble:en']
+            tasks: ['assemble:site']
         }
     },
   });
@@ -92,14 +98,22 @@ module.exports = function(grunt) {
     'grunt-contrib-compass',
     'grunt-contrib-watch',
     'grunt-assemble',
-    'grunt-svg-sprite',
-
+    'grunt-svg-sprite'
 ].forEach(grunt.loadNpmTasks);
 
   // Default task(s).
   grunt.registerTask('default', [
       'compass:dist',
-      'assemble:en'
+      'assemble:en',
+      'assemble:lt'
   ]);
+
+
+  // Default task(s).
+  grunt.registerTask('assemble:site', [
+      'assemble:en',
+      'assemble:lt'
+  ]);
+
 
 };

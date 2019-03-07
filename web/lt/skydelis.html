@@ -5,7 +5,7 @@
         <title>Admin Panel</title>
         <link rel="stylesheet" href="assets/css/app.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/css/app.css">
+        <link rel="stylesheet" href="../assets/css/app.css">
     </head>
     <body>
         <div class="topbar">
@@ -55,12 +55,12 @@
             <div class="side-column side-column--main">
         
                     <div class="side-name">
-                      <p>main</p>
+                      <p>Pagr</p>
                     </div>
         
               <ul class="side-column__lists">
         
-              <li class="">
+              <li class="active">
                 <a href="#">
                   <div class="side-column__lists--left">
                         <svg class="svg-icon">
@@ -68,7 +68,7 @@
                             </use>
                         </svg>
         
-                      Dashboard
+                      Skydelis
         
                     </div>
         
@@ -88,7 +88,7 @@
                               </use>
                           </svg>
         
-                        UI kit
+                        V. Sąsajos rinkinys
         
                       </div>
         
@@ -107,7 +107,7 @@
                                 </use>
                             </svg>
         
-                          Typography
+                          Tipografija
         
                         </div>
         
@@ -126,7 +126,7 @@
                                   </use>
                               </svg>
         
-                             Components
+                             Komponentai
         
                           </div>
         
@@ -145,7 +145,7 @@
                                     </use>
                                 </svg>
         
-                              Icons
+                              Ikonos
         
                             </div>
         
@@ -164,7 +164,7 @@
                                       </use>
                                   </svg>
         
-                                Forms
+                                Formos
         
                               </div>
         
@@ -193,7 +193,7 @@
                               </use>
                           </svg>
         
-                        Tables
+                        Lentelės
         
                       </div>
         
@@ -212,7 +212,7 @@
                                 </use>
                             </svg>
         
-                            Charts
+                            Grafikai
         
         
                         </div>
@@ -232,7 +232,7 @@
                                   </use>
                               </svg>
         
-                              Maps
+                              Žemėlapiai
         
         
                           </div>
@@ -251,7 +251,7 @@
                                     </use>
                                 </svg>
         
-                              Mail
+                              El-paštas
         
                             </div>
         
@@ -334,10 +334,221 @@
         </div>
         <div class="section-container">
             Welcome!
+            
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 col-xl-3">
+            <div class="boxes boxes--right">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="circle circle--border circle--success">
+                            <svg class="circle__svg">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#dashboard">
+                                </use>
+                            </svg>
+
+                        </div>
+                    </div>
+                    <div class="col-8 v-align">
+                        <h5>65,570</h5>
+                        <p>Šiandienos lankytojai</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-xl-3">
+            <div class="boxes boxes--right">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="circle circle--primary">
+                            <svg class="circle__svg">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#dashboard">
+                                </use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col-8 v-align">
+                        <h5>65,570</h5>
+                        <p>Bendrai</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-xl-3">
+            <div class="boxes boxes--right">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="circle circle--danger">
+                            <svg class="circle__svg">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#dashboard">
+                                </use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col-8 v-align">
+                        <h5>65,570</h5>
+                        <p>Šiandienos pardavimai</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-xl-3">
+            <div class="boxes boxes--right">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="circle circle--secondary">
+                            <svg class="circle__svg">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#dashboard">
+                                </use>
+                            </svg>
+
+
+                        </div>
+                    </div>
+                    <div class="col-8 v-align">
+                        <h5>65,570</h5>
+                        <p>Konversija</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="row">
+        <div class="col-xl-4">
+            <div class="boxes">
+                <h6 class="boxes__title">Yearly sales report</h6>
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+
+        <div class="col-xl-4">
+            <div class="boxes">
+                <h6 class="boxes__title">Yearly sales report</h6>
+                <canvas id="myChart1"></canvas>
+            </div>
+        </div>
+
+        <div class="col-xl-4">
+            <div class="boxes">
+                <h6 class="boxes__title">Yearly sales report</h6>
+                <canvas id="myChart2"></canvas>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-xl-8">
+            <div class="boxes">
+                <h6 class="boxes__title">Latest projects</h6>
+<table class="table table-borderless">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Project Name</th>
+      <th scope="col">Start Date</th>
+      <th scope="col">Due Date</th>
+      <th scope="col">Status</th>
+      <th scope="col">Assign</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Hello Admin v1</td>
+      <td>01 / 01 / 2019 </td>
+      <td>01 / 03 / 2019</td>
+      <td>Released</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Hello FrontEnd v1</td>
+      <td>01 / 01 / 2019</td>
+      <td>01 / 03 / 2019</td>
+      <td>Released</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Hello Admin v1.1</td>
+      <td>01 / 01 / 2019</td>
+      <td>01 / 03 / 2019</td>
+      <td>Pending</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>Hello FrontEnd v1.1</td>
+      <td>01 / 01 / 2019</td>
+      <td>01 / 03 / 2019</td>
+      <td>Work In Progress</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>Hello Admin v1.3</td>
+      <td>01 / 01 / 2019</td>
+      <td>01 / 03 / 2019</td>
+      <td>Comming soon</td>
+      <td>@mdo</td>
+    </tr>
+  </tbody>
+</table>
+            </div>
+        </div>
+
+        <div class="col-xl-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="boxes boxes--flex">
+                            <img class="boxes__image"src="../assets/images/model.jpg" alt="user picture">
+                            <div class="boxes__user-info v-align">
+                                <h6>Chris</h6>
+                                <p>user@email.com</p>
+                                <p class="user-role user-role--admin">Admin</p>
+
+                            </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="boxes boxes--flex">
+                            <img class="boxes__image"src="../assets/images/model.jpg" alt="user picture">
+                            <div class="boxes__user-info v-align">
+                                <h6>Chris</h6>
+                                <p>user@email.com</p>
+                                <p class="user-role user-role--user">Master</p>
+
+                            </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="boxes boxes--flex">
+                            <img class="boxes__image"src="../assets/images/model.jpg" alt="user picture">
+                            <div class="boxes__user-info v-align">
+                                <h6>Chris</h6>
+                                <p>user@email.com</p>
+                                <p class="user-role user-role--master">User</p>
+
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
         </div>
         <div class="svg-sprite-container"><?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow" viewBox="0 0 3.29 5.16" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><style>.ast0{fill:none;stroke:#000;stroke-miterlimit:10}</style><path class="ast0" d="M.35.35l2.23 2.23L.35 4.81"/></symbol><symbol viewBox="0 0 21.5 21" id="dashboard" xmlns="http://www.w3.org/2000/svg"><path class="bst0" d="M18.83 19.66H2.67V6.78l8.08-5.44 8.08 5.44z"/></symbol><symbol id="menu" viewBox="0 0 21.5 21" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><style>.cst0{fill:none;stroke:#fff;stroke-miterlimit:10}</style><path class="cst0" d="M0 .5h21.5M0 10.5h21.5M0 20.5h21.5"/></symbol><symbol id="smile" viewBox="0 0 21.5 21" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><style>.dst0{fill:none;stroke:#fff;stroke-miterlimit:10}</style><circle class="dst0" cx="10.77" cy="10.53" r="9.53"/><path class="dst0" d="M14.71 10.18c0 2.18-1.76 3.94-3.94 3.94s-3.94-1.76-3.94-3.94M6.77 8.22a1.34 1.34 0 0 1 2.68 0M12.04 8.22a1.34 1.34 0 0 1 2.68 0"/></symbol><symbol id="uikit" viewBox="0 0 22.56 22.35" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><style>.est0{fill:none;stroke:#000;stroke-width:2;stroke-miterlimit:10}</style><path class="est0" d="M8.04 17.83a3.519 3.519 0 1 1-7.04 0c0-1.94 3.52-6.52 3.52-6.52s3.52 4.58 3.52 6.52zM21.56 8.16a3.519 3.519 0 1 1-7.04 0c0-1.94 3.52-6.52 3.52-6.52s3.52 4.58 3.52 6.52z"/></symbol></svg></div>
 
-        <script type="text/javascript" src="../node_modules/chart.js/dist/Chart.min.js"></script>
+        <script type="text/javascript" src="../../node_modules/chart.js/dist/Chart.min.js"></script>
 
 
         <script>

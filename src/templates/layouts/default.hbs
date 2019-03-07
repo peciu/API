@@ -5,18 +5,31 @@
         <title>Admin Panel</title>
         <link rel="stylesheet" href="assets/css/app.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{#is default.lang 'lt'}}
+        <link rel="stylesheet" href="../assets/css/app.css">
+    {{else}}
+        <link rel="stylesheet" href="assets/css/app.css">
+    {{/is}}
     </head>
     <body>
         {{>navbar}}
         {{>sidebar}}
         <div class="section-container">
+            {{>title}}
             {{body}}
         </div>
         {{#is basename 'index'}}
             {{>footer}}
         {{/is}}
         <div class="svg-sprite-container">{{> 'sprite.symbol' }}</div>
+
+        {{#is default.lang 'lt'}}
+        <script type="text/javascript" src="../../node_modules/chart.js/dist/Chart.min.js"></script>
+    {{else}}
         <script type="text/javascript" src="../node_modules/chart.js/dist/Chart.min.js"></script>
+    {{/is}}
+
+
         <script>
         var ctx = document.getElementById('myChart').getContext('2d');
         var chart = new Chart(ctx, {
